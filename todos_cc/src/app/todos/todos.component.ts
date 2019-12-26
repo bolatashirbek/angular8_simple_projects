@@ -9,7 +9,7 @@ import {delay} from 'rxjs/operators';
 })
 export class TodosComponent implements OnInit {
 
-  private loading = true;
+  private loading: boolean = true;
 
   constructor(private todosService: TodosService) {
   }
