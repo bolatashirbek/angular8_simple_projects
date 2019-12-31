@@ -3,7 +3,18 @@
     color: title.length < 5 ? 'red' : 'green',
     fontWeight: title.length < 7 ? 'normal' : 'bold'
   }">{{title}}</h2>
-  <p>{{text}}</p>
+
+  <p class="text" [ngClass]="{
+    blue: textColor === 'blue',
+    green: textColor === 'green',
+    red: textColor === 'red'
+  }">{{text}}</p>
+
+  <div class="buttons">
+    <button (click)="textColor = 'blue'">Set Blue</button>
+    <button (click)="textColor = 'green'">Set Green</button>
+    <button (click)="textColor = 'red'">Set Red</button>
+  </div>
 
   <div class="buttons">
     <button (click)="changeTitle()">Change title</button>

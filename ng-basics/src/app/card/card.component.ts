@@ -9,6 +9,8 @@ export class CardComponent implements OnInit {
   title = 'My Card Title';
   text = 'My sample text!';
 
+  textColor: string;
+
   ngOnInit() {
   }
 
