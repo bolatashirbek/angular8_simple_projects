@@ -4,6 +4,8 @@
   <p>{{getInfo()}}</p>
 
   <div>
-    <img src="{{imgUrl}}">
+    <img [src]="imgUrl">
   </div>
+  <br>
+  <button [disabled]="disabled">Enable</button>
 </div>
