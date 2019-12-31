@@ -9,18 +9,10 @@ export class CardComponent implements OnInit {
   title = 'My Card Title';
   text = 'My sample text!';
 
-  disabled = false;
-
-  imgUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
-
-  ngOnInit(): void {
-    setTimeout(() => {
-      this.imgUrl = 'https://vuejs.org/images/logo.png';
-      this.disabled = true;
-    }, 3000);
+  ngOnInit() {
   }
 
-  getInfo(): string {
-    return 'This is my info';
+  changeTitle() {
+    this.title = 'Title has been changed!';
   }
 }
