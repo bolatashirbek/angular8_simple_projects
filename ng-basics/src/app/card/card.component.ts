@@ -11,6 +11,8 @@ export class CardComponent implements OnInit {
   @Input() card: Card;
   @Input() index: number;
 
+  cardDate: Date = new Date();
+
   textColor: string;
 
   ngOnInit() {

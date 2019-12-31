@@ -4,6 +4,11 @@
     fontWeight: card.title.length < 7 ? 'normal' : 'bold'
   }">{{index}} {{card.title}}</h2>
 
+  <div class="buttons">
+    <button (click)="changeTitle()">Change title</button>
+    <button (click)="card.title = 'Inline title'">Change title inline</button>
+  </div>
+
   <p class="text"
      [class.blue]="textColor === 'blue'"
      [class.green]="textColor === 'green'"
@@ -16,12 +21,11 @@
     <button (click)="textColor = 'red'">Set Red</button>
   </div>
 
-  <div class="buttons">
-    <button (click)="changeTitle()">Change title</button>
-    <button (click)="card.title = 'Inline title'">Change title inline</button>
-  </div>
-
   <div>
     <input type="text" [(ngModel)]="card.title">
+  </div>
+
+  <div class="date">
+    <strong>{{cardDate | date: 'dd MMMM yyyy HH:mm:ss'}}</strong>
   </div>
 </div>
