@@ -2,7 +2,7 @@
   <h2 [ngStyle]="{
     color: card.title.length < 5 ? 'red' : 'green',
     fontWeight: card.title.length < 7 ? 'normal' : 'bold'
-  }">{{card.title}}</h2>
+  }">{{index}} {{card.title}}</h2>
 
   <p class="text"
      [class.blue]="textColor === 'blue'"

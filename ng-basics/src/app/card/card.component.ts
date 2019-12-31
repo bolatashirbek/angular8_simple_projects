@@ -9,6 +9,7 @@ import {Card} from '../app.component';
 export class CardComponent implements OnInit {
 
   @Input() card: Card;
+  @Input() index: number;
 
   textColor: string;
 
