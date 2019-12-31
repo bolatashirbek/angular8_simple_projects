@@ -1,14 +1,14 @@
 <div class="card">
   <h2 [ngStyle]="{
-    color: title.length < 5 ? 'red' : 'green',
-    fontWeight: title.length < 7 ? 'normal' : 'bold'
-  }">{{title}}</h2>
+    color: card.title.length < 5 ? 'red' : 'green',
+    fontWeight: card.title.length < 7 ? 'normal' : 'bold'
+  }">{{card.title}}</h2>
 
   <p class="text"
      [class.blue]="textColor === 'blue'"
      [class.green]="textColor === 'green'"
      [class.red]="textColor === 'red'"
-  >{{text}}</p>
+  >{{card.text}}</p>
 
   <div class="buttons">
     <button (click)="textColor = 'blue'">Set Blue</button>
@@ -18,10 +18,10 @@
 
   <div class="buttons">
     <button (click)="changeTitle()">Change title</button>
-    <button (click)="title = 'Inline title'">Change title inline</button>
+    <button (click)="card.title = 'Inline title'">Change title inline</button>
   </div>
 
   <div>
-    <input type="text" [(ngModel)]="title" (ngModelChange)="changeHandler()">
+    <input type="text" [(ngModel)]="card.title">
   </div>
 </div>
