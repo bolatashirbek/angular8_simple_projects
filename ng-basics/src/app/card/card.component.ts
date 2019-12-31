@@ -9,11 +9,9 @@ export class CardComponent {
   title = 'My Card Title';
   text = 'My sample text!';
 
-  number = 42;
-  array = [1, 1, 2, 3, 5, 8, 13];
-  obj = {name: 'Vladilen', info: {age: 25, job: 'Frontend developer'}};
+  imgUrl = 'https://angular.io/assets/images/logos/angular/angular.png';
 
-  getInfo() {
+  getInfo(): string {
     return 'This is my info';
   }
 }
